@@ -1,0 +1,28 @@
+{
+    "ro_id": "RO-007",
+    "expected_damage_classification": {
+      "category": "ENGINE",
+      "sub_category": "IGNITION_SYSTEM",
+      "severity": "MEDIUM"
+    },
+    "expected_opportunities": [
+      {
+        "type": "WARRANTY_LABOR_RATE",
+        "finding": "Historical synthetic benchmark indicates potential labor-rate increase.",
+        "current_rate": 145.0,
+        "reference_rate": 165.0,
+        "potential_additional_labor": 58.0
+      },
+      {
+        "type": "WARRANTY_PARTS_MARKUP",
+        "finding": "Ignition coil price is below synthetic allowable warranty price.",
+        "current_sale_price": 129.8,
+        "reference_allowed_price": 141.6,
+        "potential_additional_parts_reimbursement": 11.8
+      }
+    ],
+    "notes": [
+      "Demonstrates multiple AI-generated warranty uplift opportunities.",
+      "Synthetic answer key for evaluation only. Not to be used as agent input."
+    ]
+  }

@@ -1,0 +1,27 @@
+{
+    "ro_id": "RO-001",
+    "expected_damage_classification": {
+      "category": "MECHANICAL",
+      "sub_category": "ENGINE_AIR_INDUCTION",
+      "severity": "MEDIUM"
+    },
+    "expected_opportunities": [
+      {
+        "type": "WARRANTY_LABOR_RATE",
+        "finding": "Submitted labor rate is below the state warranty reference rate.",
+        "current_rate": 145.0,
+        "reference_rate": 165.0,
+        "potential_additional_labor": 130.0
+      },
+      {
+        "type": "WARRANTY_PARTS_MARKUP",
+        "finding": "Turbocharger has additional allowable markup versus what was submitted.",
+        "current_sale_price": 1012.0,
+        "reference_allowed_price": 1060.0,
+        "potential_additional_parts_reimbursement": 48.0
+      }
+    ],
+    "notes": [
+      "Synthetic answer key for evaluation only. Not to be used as agent input."
+    ]
+  }

@@ -1,0 +1,89 @@
+{
+    "ro_id": "RO-002",
+    "dealer_id": "DLR-1001",
+    "dealer_name": "Northwest Auto Group",
+    "ro_number": "240002",
+    "ro_status": "CLOSED",
+    "opened_date": "2026-05-11",
+    "closed_date": "2026-05-13",
+    "repair_order_type": "GENERAL_REPAIR",
+    "payment_classification": "WARRANTY",
+    "customer": {
+      "customer_id": "CUST-10002",
+      "customer_type": "RETAIL",
+      "zip_code": "98109"
+    },
+    "vehicle": {
+      "vin": "1N4BL4BV7MN100002",
+      "year": 2021,
+      "make": "Nissan",
+      "model": "Altima",
+      "trim": "SV",
+      "mileage": 58420,
+      "in_service_date": "2021-06-21",
+      "warranty_status": "ACTIVE"
+    },
+    "repair_concern": {
+      "customer_complaint": "Vehicle pulls to the right and steering wheel vibrates during braking.",
+      "technician_findings": "Front brake rotor runout exceeds specification. Front brake pads show uneven wear.",
+      "cause": "Excessive front rotor runout.",
+      "correction": "Replace front brake rotors and brake pads."
+    },
+    "labor": {
+      "operations": [
+        {
+          "operation_code": "BRK-201",
+          "description": "Replace front brake rotors",
+          "hours": 1.8,
+          "labor_rate": 150.0,
+          "amount": 270.0
+        },
+        {
+          "operation_code": "BRK-202",
+          "description": "Replace front brake pads",
+          "hours": 0.9,
+          "labor_rate": 150.0,
+          "amount": 135.0
+        }
+      ],
+      "total_hours": 2.7,
+      "customer_rate": 150.0
+    },
+    "parts": [
+      {
+        "part_number": "40206-6CA0A",
+        "description": "Front Brake Rotor",
+        "quantity": 2,
+        "cost": 128.0,
+        "sale_price": 140.8
+      },
+      {
+        "part_number": "D1060-6CA0A",
+        "description": "Front Brake Pad Set",
+        "quantity": 1,
+        "cost": 96.0,
+        "sale_price": 105.6
+      }
+    ],
+    "warranty": {
+      "warranty_provider": "OEM",
+      "warranty_program": "BASIC",
+      "claim_number": "CLM-002-2026",
+      "coverage_status": "ELIGIBLE",
+      "coverage_reason": "Covered component failure.",
+      "deductible": 0.0
+    },
+    "state": {
+      "state_code": "WA",
+      "state_name": "Washington"
+    },
+    "dealer_submission": {
+      "submitted_labor_rate": 150.0,
+      "submitted_parts_markup_percent": 10.0,
+      "claim_status": "PAID",
+      "reimbursement_amount": 651.4
+    },
+    "notes": [
+      "Synthetic demo record."
+    ]
+  }

@@ -1,0 +1,20 @@
+{
+    "ro_id": "RO-002",
+    "expected_damage_classification": {
+      "category": "BRAKE",
+      "sub_category": "FRONT_BRAKE_SYSTEM",
+      "severity": "MEDIUM"
+    },
+    "expected_opportunities": [
+      {
+        "type": "WARRANTY_LABOR_RATE",
+        "finding": "Submitted labor rate is below the state warranty reference rate.",
+        "current_rate": 150.0,
+        "reference_rate": 170.0,
+        "potential_additional_labor": 54.0
+      }
+    ],
+    "notes": [
+      "Synthetic answer key for evaluation only. Not to be used as agent input."
+    ]
+  }

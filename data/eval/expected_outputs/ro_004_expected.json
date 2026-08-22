@@ -1,0 +1,27 @@
+{
+    "ro_id": "RO-004",
+    "expected_damage_classification": {
+      "category": "MECHANICAL",
+      "sub_category": "COOLING_SYSTEM",
+      "severity": "HIGH"
+    },
+    "expected_opportunities": [
+      {
+        "type": "WARRANTY_LABOR_RATE",
+        "finding": "Labor was submitted below the Oregon reference warranty rate.",
+        "current_rate": 140.0,
+        "reference_rate": 160.0,
+        "potential_additional_labor": 90.0
+      },
+      {
+        "type": "WARRANTY_PARTS_MARKUP",
+        "finding": "Water pump may have additional reimbursable markup.",
+        "current_sale_price": 341.0,
+        "reference_allowed_price": 372.0,
+        "potential_additional_parts_reimbursement": 31.0
+      }
+    ],
+    "notes": [
+      "Synthetic answer key for evaluation only. Not to be used as agent input."
+    ]
+  }

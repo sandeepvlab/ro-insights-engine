@@ -1,0 +1,104 @@
+{
+    "ro_id": "RO-007",
+    "dealer_id": "DLR-1001",
+    "dealer_name": "Northwest Auto Group",
+    "ro_number": "240007",
+    "ro_status": "CLOSED",
+    "opened_date": "2026-06-15",
+    "closed_date": "2026-06-17",
+    "repair_order_type": "GENERAL_REPAIR",
+    "payment_classification": "WARRANTY",
+    "customer": {
+      "customer_id": "CUST-10007",
+      "customer_type": "RETAIL",
+      "zip_code": "98033"
+    },
+    "vehicle": {
+      "vin": "JM1BPACL9N1100007",
+      "year": 2022,
+      "make": "Mazda",
+      "model": "Mazda3",
+      "trim": "Premium",
+      "mileage": 36200,
+      "in_service_date": "2022-02-20",
+      "warranty_status": "ACTIVE"
+    },
+    "repair_concern": {
+      "customer_complaint": "Engine runs rough at idle and check engine light is illuminated.",
+      "technician_findings": "Misfire detected on cylinder 3. Spark plug and ignition coil tested. Ignition coil output is intermittent.",
+      "cause": "Ignition coil failure.",
+      "correction": "Replace ignition coil and spark plug. Clear diagnostic codes and perform road test."
+    },
+    "labor": {
+      "operations": [
+        {
+          "operation_code": "DIAG-101",
+          "description": "Engine misfire diagnosis",
+          "hours": 1.4,
+          "labor_rate": 145.0,
+          "amount": 203.0
+        },
+        {
+          "operation_code": "ENG-215",
+          "description": "Replace ignition coil",
+          "hours": 0.6,
+          "labor_rate": 145.0,
+          "amount": 87.0
+        },
+        {
+          "operation_code": "ENG-216",
+          "description": "Replace spark plug",
+          "hours": 0.4,
+          "labor_rate": 145.0,
+          "amount": 58.0
+        },
+        {
+          "operation_code": "TEST-101",
+          "description": "Road test and diagnostic verification",
+          "hours": 0.5,
+          "labor_rate": 145.0,
+          "amount": 72.5
+        }
+      ],
+      "total_hours": 2.9,
+      "customer_rate": 145.0
+    },
+    "parts": [
+      {
+        "part_number": "PE01-18-100",
+        "description": "Ignition Coil",
+        "quantity": 1,
+        "cost": 118.0,
+        "sale_price": 129.8
+      },
+      {
+        "part_number": "PE5R-18-110",
+        "description": "Spark Plug",
+        "quantity": 1,
+        "cost": 17.0,
+        "sale_price": 18.7
+      }
+    ],
+    "warranty": {
+      "warranty_provider": "OEM",
+      "warranty_program": "BASIC",
+      "claim_number": "CLM-007-2026",
+      "coverage_status": "ELIGIBLE",
+      "coverage_reason": "Ignition component failure during active warranty.",
+      "deductible": 0.0
+    },
+    "state": {
+      "state_code": "WA",
+      "state_name": "Washington"
+    },
+    "dealer_submission": {
+      "submitted_labor_rate": 145.0,
+      "submitted_parts_markup_percent": 10.0,
+      "claim_status": "PAID",
+      "reimbursement_amount": 569.0
+    },
+    "notes": [
+      "Synthetic demo record.",
+      "Demonstrates multiple AI-generated warranty uplift opportunities."
+    ]
+  }

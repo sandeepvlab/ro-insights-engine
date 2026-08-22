@@ -1,0 +1,82 @@
+{
+    "ro_id": "RO-006",
+    "dealer_id": "DLR-1003",
+    "dealer_name": "Evergreen Automotive",
+    "ro_number": "470206",
+    "ro_status": "CLOSED",
+    "opened_date": "2026-06-08",
+    "closed_date": "2026-06-09",
+    "repair_order_type": "GENERAL_REPAIR",
+    "payment_classification": "CUSTOMER_PAY",
+    "customer": {
+      "customer_id": "CUST-10006",
+      "customer_type": "RETAIL",
+      "zip_code": "98052"
+    },
+    "vehicle": {
+      "vin": "3FA6P0H72KR100006",
+      "year": 2019,
+      "make": "Ford",
+      "model": "Fusion",
+      "trim": "Titanium",
+      "mileage": 102450,
+      "in_service_date": "2019-02-14",
+      "warranty_status": "EXPIRED"
+    },
+    "repair_concern": {
+      "customer_complaint": "Battery warning light illuminated and vehicle occasionally stalls.",
+      "technician_findings": "Alternator output below specification. Battery tests within normal range.",
+      "cause": "Alternator internal failure.",
+      "correction": "Replace alternator and verify charging voltage."
+    },
+    "labor": {
+      "operations": [
+        {
+          "operation_code": "ELEC-101",
+          "description": "Charging system diagnosis",
+          "hours": 1.0,
+          "labor_rate": 150.0,
+          "amount": 150.0
+        },
+        {
+          "operation_code": "ELEC-115",
+          "description": "Replace alternator",
+          "hours": 1.8,
+          "labor_rate": 150.0,
+          "amount": 270.0
+        }
+      ],
+      "total_hours": 2.8,
+      "customer_rate": 150.0
+    },
+    "parts": [
+      {
+        "part_number": "G3ZC-10300-A",
+        "description": "Alternator",
+        "quantity": 1,
+        "cost": 365.0,
+        "sale_price": 401.5
+      }
+    ],
+    "warranty": {
+      "warranty_provider": null,
+      "warranty_program": null,
+      "claim_number": null,
+      "coverage_status": "EXPIRED",
+      "coverage_reason": "Vehicle is outside synthetic warranty period.",
+      "deductible": null
+    },
+    "state": {
+      "state_code": "WA",
+      "state_name": "Washington"
+    },
+    "dealer_submission": {
+      "submitted_labor_rate": 150.0,
+      "submitted_parts_markup_percent": 10.0,
+      "claim_status": "NOT_APPLICABLE",
+      "reimbursement_amount": 0.0
+    },
+    "notes": [
+      "Synthetic demo record."
+    ]
+  }

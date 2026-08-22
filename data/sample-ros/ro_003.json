@@ -1,0 +1,89 @@
+{
+    "ro_id": "RO-003",
+    "dealer_id": "DLR-1002",
+    "dealer_name": "Cascade Motors",
+    "ro_number": "350103",
+    "ro_status": "CLOSED",
+    "opened_date": "2026-05-18",
+    "closed_date": "2026-05-21",
+    "repair_order_type": "COLLISION_REPAIR",
+    "payment_classification": "CUSTOMER_PAY",
+    "customer": {
+      "customer_id": "CUST-10003",
+      "customer_type": "RETAIL",
+      "zip_code": "98033"
+    },
+    "vehicle": {
+      "vin": "5NMS3DAJ2NH100003",
+      "year": 2022,
+      "make": "Hyundai",
+      "model": "Santa Fe",
+      "trim": "SEL",
+      "mileage": 31780,
+      "in_service_date": "2022-08-12",
+      "warranty_status": "ACTIVE"
+    },
+    "repair_concern": {
+      "customer_complaint": "Rear bumper damaged after parking lot impact.",
+      "technician_findings": "Rear bumper cover cracked with damage to mounting brackets.",
+      "cause": "Low-speed collision.",
+      "correction": "Replace rear bumper cover and mounting hardware."
+    },
+    "labor": {
+      "operations": [
+        {
+          "operation_code": "COL-110",
+          "description": "Remove and replace rear bumper cover",
+          "hours": 2.4,
+          "labor_rate": 155.0,
+          "amount": 372.0
+        },
+        {
+          "operation_code": "COL-115",
+          "description": "Replace bumper mounting brackets",
+          "hours": 0.8,
+          "labor_rate": 155.0,
+          "amount": 124.0
+        }
+      ],
+      "total_hours": 3.2,
+      "customer_rate": 155.0
+    },
+    "parts": [
+      {
+        "part_number": "86611-S2AA0",
+        "description": "Rear Bumper Cover",
+        "quantity": 1,
+        "cost": 420.0,
+        "sale_price": 462.0
+      },
+      {
+        "part_number": "86612-S2AA0",
+        "description": "Rear Bumper Mounting Bracket",
+        "quantity": 2,
+        "cost": 35.0,
+        "sale_price": 38.5
+      }
+    ],
+    "warranty": {
+      "warranty_provider": null,
+      "warranty_program": null,
+      "claim_number": null,
+      "coverage_status": "NOT_ELIGIBLE",
+      "coverage_reason": "Collision damage is not covered by standard vehicle warranty.",
+      "deductible": null
+    },
+    "state": {
+      "state_code": "WA",
+      "state_name": "Washington"
+    },
+    "dealer_submission": {
+      "submitted_labor_rate": 155.0,
+      "submitted_parts_markup_percent": 10.0,
+      "claim_status": "NOT_APPLICABLE",
+      "reimbursement_amount": 0.0
+    },
+    "notes": [
+      "Synthetic collision record."
+    ]
+  }

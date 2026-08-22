@@ -1,0 +1,23 @@
+{
+    "ro_id": "RO-005",
+    "expected_damage_classification": {
+      "category": "ELECTRICAL",
+      "sub_category": "POWER_LIFTGATE",
+      "severity": "MEDIUM"
+    },
+    "expected_opportunities": [
+      {
+        "type": "DATA_COMPLETENESS",
+        "finding": "Repair documentation contains diagnostic evidence but does not contain an attached diagnostic test result.",
+        "required_data": [
+          "Diagnostic trouble code report",
+          "Actuator test result",
+          "Technician verification"
+        ]
+      }
+    ],
+    "notes": [
+      "Demonstrates an approval/data-completeness workflow rather than direct uplift.",
+      "Synthetic answer key for evaluation only. Not to be used as agent input."
+    ]
+  }

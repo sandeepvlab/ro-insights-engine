@@ -1,0 +1,13 @@
+{
+    "ro_id": "RO-003",
+    "expected_damage_classification": {
+      "category": "COLLISION",
+      "sub_category": "REAR_BUMPER",
+      "severity": "MEDIUM"
+    },
+    "expected_opportunities": [],
+    "notes": [
+      "Useful negative example for warranty eligibility classification.",
+      "Synthetic answer key for evaluation only. Not to be used as agent input."
+    ]
+  }

@@ -1,0 +1,82 @@
+{
+    "ro_id": "RO-005",
+    "dealer_id": "DLR-1003",
+    "dealer_name": "Evergreen Automotive",
+    "ro_number": "470205",
+    "ro_status": "CLOSED",
+    "opened_date": "2026-06-01",
+    "closed_date": "2026-06-03",
+    "repair_order_type": "GENERAL_REPAIR",
+    "payment_classification": "EXTENDED_WARRANTY",
+    "customer": {
+      "customer_id": "CUST-10005",
+      "customer_type": "RETAIL",
+      "zip_code": "98004"
+    },
+    "vehicle": {
+      "vin": "2T3RFREV5NW100005",
+      "year": 2022,
+      "make": "Toyota",
+      "model": "RAV4",
+      "trim": "XLE",
+      "mileage": 46800,
+      "in_service_date": "2022-04-10",
+      "warranty_status": "EXTENDED"
+    },
+    "repair_concern": {
+      "customer_complaint": "Rear hatch does not open consistently using power liftgate.",
+      "technician_findings": "Power liftgate actuator intermittently fails to respond. Diagnostic codes indicate actuator communication fault.",
+      "cause": "Power liftgate actuator failure.",
+      "correction": "Replace power liftgate actuator and initialize system."
+    },
+    "labor": {
+      "operations": [
+        {
+          "operation_code": "ELEC-501",
+          "description": "Electrical diagnosis",
+          "hours": 1.2,
+          "labor_rate": 155.0,
+          "amount": 186.0
+        },
+        {
+          "operation_code": "BODY-210",
+          "description": "Replace liftgate actuator",
+          "hours": 2.0,
+          "labor_rate": 155.0,
+          "amount": 310.0
+        }
+      ],
+      "total_hours": 3.2,
+      "customer_rate": 155.0
+    },
+    "parts": [
+      {
+        "part_number": "68910-0R031",
+        "description": "Power Liftgate Actuator",
+        "quantity": 1,
+        "cost": 540.0,
+        "sale_price": 594.0
+      }
+    ],
+    "warranty": {
+      "warranty_provider": "THIRD_PARTY",
+      "warranty_program": "EXTENDED_SERVICE_CONTRACT",
+      "claim_number": "ESC-005-2026",
+      "coverage_status": "ELIGIBLE",
+      "coverage_reason": "Component covered under extended service contract.",
+      "deductible": 100.0
+    },
+    "state": {
+      "state_code": "WA",
+      "state_name": "Washington"
+    },
+    "dealer_submission": {
+      "submitted_labor_rate": 155.0,
+      "submitted_parts_markup_percent": 10.0,
+      "claim_status": "PAID",
+      "reimbursement_amount": 890.0
+    },
+    "notes": [
+      "Synthetic extended-warranty example."
+    ]
+  }

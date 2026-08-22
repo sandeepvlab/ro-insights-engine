@@ -1,0 +1,19 @@
+{
+    "ro_id": "RO-006",
+    "expected_damage_classification": {
+      "category": "ELECTRICAL",
+      "sub_category": "CHARGING_SYSTEM",
+      "severity": "HIGH"
+    },
+    "expected_opportunities": [
+      {
+        "type": "WARRANTY_ELIGIBILITY",
+        "finding": "Repair is not eligible for OEM warranty based on vehicle warranty status.",
+        "recommendation": "Do not submit as OEM warranty claim."
+      }
+    ],
+    "notes": [
+      "Negative example for warranty eligibility.",
+      "Synthetic answer key for evaluation only. Not to be used as agent input."
+    ]
+  }

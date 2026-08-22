@@ -1,0 +1,96 @@
+{
+    "ro_id": "RO-001",
+    "dealer_id": "DLR-1001",
+    "dealer_name": "Northwest Auto Group",
+    "ro_number": "240001",
+    "ro_status": "CLOSED",
+    "opened_date": "2026-05-04",
+    "closed_date": "2026-05-07",
+    "repair_order_type": "GENERAL_REPAIR",
+    "payment_classification": "WARRANTY",
+    "customer": {
+      "customer_id": "CUST-10001",
+      "customer_type": "RETAIL",
+      "zip_code": "98052"
+    },
+    "vehicle": {
+      "vin": "1FMCU9BZ1MUA10001",
+      "year": 2022,
+      "make": "Ford",
+      "model": "Escape",
+      "trim": "SE",
+      "mileage": 42150,
+      "in_service_date": "2022-03-15",
+      "warranty_status": "ACTIVE"
+    },
+    "repair_concern": {
+      "customer_complaint": "Check engine light is on and vehicle has intermittent loss of power.",
+      "technician_findings": "Diagnostic scan identified turbocharger boost pressure below expected range. Wastegate actuator is intermittently sticking.",
+      "cause": "Turbocharger wastegate actuator failure.",
+      "correction": "Replace turbocharger assembly and perform boost system verification."
+    },
+    "labor": {
+      "operations": [
+        {
+          "operation_code": "DIAG-001",
+          "description": "Engine performance diagnostic",
+          "hours": 1.5,
+          "labor_rate": 145.0,
+          "amount": 217.5
+        },
+        {
+          "operation_code": "ENG-420",
+          "description": "Turbocharger replacement",
+          "hours": 4.2,
+          "labor_rate": 145.0,
+          "amount": 609.0
+        },
+        {
+          "operation_code": "TEST-010",
+          "description": "Boost pressure verification",
+          "hours": 0.8,
+          "labor_rate": 145.0,
+          "amount": 116.0
+        }
+      ],
+      "total_hours": 6.5,
+      "customer_rate": 145.0
+    },
+    "parts": [
+      {
+        "part_number": "FT4Z-6K682-A",
+        "description": "Turbocharger Assembly",
+        "quantity": 1,
+        "cost": 920.0,
+        "sale_price": 1012.0
+      },
+      {
+        "part_number": "W-CLAMP-001",
+        "description": "Turbocharger Clamp Kit",
+        "quantity": 1,
+        "cost": 38.0,
+        "sale_price": 41.8
+      }
+    ],
+    "warranty": {
+      "warranty_provider": "OEM",
+      "warranty_program": "POWERTRAIN",
+      "claim_number": "CLM-001-2026",
+      "coverage_status": "ELIGIBLE",
+      "coverage_reason": "Component failure within powertrain warranty period.",
+      "deductible": 0.0
+    },
+    "state": {
+      "state_code": "WA",
+      "state_name": "Washington"
+    },
+    "dealer_submission": {
+      "submitted_labor_rate": 145.0,
+      "submitted_parts_markup_percent": 10.0,
+      "claim_status": "PAID",
+      "reimbursement_amount": 1682.5
+    },
+    "notes": [
+      "Synthetic demo record."
+    ]
+  }

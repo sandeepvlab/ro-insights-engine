@@ -1,0 +1,90 @@
+{
+    "ro_id": "RO-004",
+    "dealer_id": "DLR-1002",
+    "dealer_name": "Cascade Motors",
+    "ro_number": "350104",
+    "ro_status": "CLOSED",
+    "opened_date": "2026-05-25",
+    "closed_date": "2026-05-28",
+    "repair_order_type": "GENERAL_REPAIR",
+    "payment_classification": "WARRANTY",
+    "customer": {
+      "customer_id": "CUST-10004",
+      "customer_type": "RETAIL",
+      "zip_code": "97205"
+    },
+    "vehicle": {
+      "vin": "1G1ZD5ST4NF100004",
+      "year": 2022,
+      "make": "Chevrolet",
+      "model": "Malibu",
+      "trim": "LT",
+      "mileage": 28950,
+      "in_service_date": "2022-01-28",
+      "warranty_status": "ACTIVE"
+    },
+    "repair_concern": {
+      "customer_complaint": "Vehicle overheats during extended highway driving.",
+      "technician_findings": "Coolant leak detected at water pump. Coolant residue found around pump housing.",
+      "cause": "Water pump seal failure.",
+      "correction": "Replace water pump and refill cooling system."
+    },
+    "labor": {
+      "operations": [
+        {
+          "operation_code": "ENG-301",
+          "description": "Replace water pump",
+          "hours": 3.5,
+          "labor_rate": 140.0,
+          "amount": 490.0
+        },
+        {
+          "operation_code": "COOL-010",
+          "description": "Cooling system refill and pressure test",
+          "hours": 1.0,
+          "labor_rate": 140.0,
+          "amount": 140.0
+        }
+      ],
+      "total_hours": 4.5,
+      "customer_rate": 140.0
+    },
+    "parts": [
+      {
+        "part_number": "12686712",
+        "description": "Water Pump Assembly",
+        "quantity": 1,
+        "cost": 310.0,
+        "sale_price": 341.0
+      },
+      {
+        "part_number": "DEXCOOL-001",
+        "description": "Coolant",
+        "quantity": 2,
+        "cost": 18.0,
+        "sale_price": 19.8
+      }
+    ],
+    "warranty": {
+      "warranty_provider": "OEM",
+      "warranty_program": "POWERTRAIN",
+      "claim_number": "CLM-004-2026",
+      "coverage_status": "ELIGIBLE",
+      "coverage_reason": "Water pump failure covered under synthetic powertrain example policy.",
+      "deductible": 0.0
+    },
+    "state": {
+      "state_code": "OR",
+      "state_name": "Oregon"
+    },
+    "dealer_submission": {
+      "submitted_labor_rate": 140.0,
+      "submitted_parts_markup_percent": 10.0,
+      "claim_status": "PAID",
+      "reimbursement_amount": 1020.8
+    },
+    "notes": [
+      "Synthetic demo record.",
+      "Oregon reimbursement rule represented here is not an actual legal rule."
+    ]
+  }
