@@ -4,14 +4,18 @@ import time
 import glob
 import sys
 
-# Allow importing from packages/rag and packages/observability
+# Allow importing from packages/rag, packages/observability, packages/guardrails
 sys.path.append(os.path.join(os.path.dirname(__file__), "..", "rag"))
 sys.path.append(os.path.join(os.path.dirname(__file__), "..", "observability"))
+sys.path.append(os.path.join(os.path.dirname(__file__), "..", "guardrails"))
+
 
 from openai import OpenAI
 from dotenv import load_dotenv
 from retrieve import retrieve_relevant_chunks
 from logger import new_run_id, log_event, Timer
+from guardrails import scrub_ro_for_llm, enforce_action_allowed
+
 
 load_dotenv()
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
@@ -63,16 +67,23 @@ def with_retries(func, max_attempts=2, *args, **kwargs):
 
 # --- States ---
 def load_ro(ro_path: str) -> dict:
+    enforce_action_allowed("READ_RO")
     with open(ro_path) as f:
         return json.load(f)
 
 
 def classify_damage(ro: dict, run_id: str) -> dict:
+    enforce_action_allowed("CLASSIFY_DAMAGE")
+
+    # Guardrail: strip PII before any data reaches the LLM
+    safe_ro = scrub_ro_for_llm(ro)
+
+
     prompt = (
-        f"Customer complaint: {ro['repair_concern']['customer_complaint']}\n"
-        f"Technician findings: {ro['repair_concern']['technician_findings']}\n"
-        f"Cause: {ro['repair_concern']['cause']}\n"
-        f"Correction: {ro['repair_concern']['correction']}"
+        f"Customer complaint: {safe_ro['repair_concern']['customer_complaint']}\n"
+        f"Technician findings: {safe_ro['repair_concern']['technician_findings']}\n"
+        f"Cause: {safe_ro['repair_concern']['cause']}\n"
+        f"Correction: {safe_ro['repair_concern']['correction']}"
     )
 
     with Timer() as t:
@@ -101,6 +112,7 @@ def extract_labor_parts(ro: dict, run_id: str) -> dict:
 
 
 def retrieve_warranty_rules(ro: dict, run_id: str) -> dict:
+    enforce_action_allowed("RETRIEVE_WARRANTY_RULES")
     state_code = ro["state"]["state_code"]
 
     with Timer() as t:
@@ -131,6 +143,7 @@ def retrieve_warranty_rules(ro: dict, run_id: str) -> dict:
 
 
 def compute_uplift_opportunities(ro: dict, labor_parts: dict, rules: dict, run_id: str) -> list:
+    enforce_action_allowed("COMPUTE_UPLIFT")
     opportunities = []
     reason = None
 
@@ -154,8 +167,7 @@ def compute_uplift_opportunities(ro: dict, labor_parts: dict, rules: dict, run_i
                     "potential_additional_labor": round((reference_rate - submitted_rate) * extra_hours, 2)
                 })
 
-    # Logging happens here, after the `with` block has closed and
-    # t.elapsed_ms is guaranteed to be set.
+    
     log_extra = {"opportunities_found": len(opportunities)}
     if reason:
         log_extra["reason"] = reason
