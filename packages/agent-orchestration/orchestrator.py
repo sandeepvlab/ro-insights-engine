@@ -27,10 +27,16 @@ def call_llm(prompt: str):
                 "role": "system",
                 "content": (
                     "You are an automotive repair order damage classifier. "
+                    "Classify the damage using ONLY one of these categories: "
+                    "MECHANICAL, ELECTRICAL, ENGINE, COLLISION, BRAKE. "
+                    "Use ENGINE only for combustion/ignition-specific issues (spark plugs, ignition coils, "
+                    "misfires). Use MECHANICAL for drivetrain, cooling system, turbocharger, water pump, "
+                    "or other non-electrical mechanical component failures. "
                     "Given technician findings, respond ONLY with a JSON object "
                     "with keys: category, sub_category, severity, confidence. "
+                    "category MUST be one of the five listed values exactly. "
                     "No extra text, no markdown fences."
-                )
+        )
             },
             {"role": "user", "content": prompt}
         ]
