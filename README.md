@@ -32,7 +32,7 @@ graph TD
 | Evaluation | Compares agent output against hand-labeled expected results | Custom harness, 7 synthetic test ROs | ✅ Working (6/7 pass, documented gap below) |
 | Guardrails / PII | Scrubs PII before LLM calls; restricts agent to an action allow-list | Regex-based scrubber, allow-list enforcement | ✅ Working |
 | AI Testing / Security | Adversarial prompt-injection resistance testing | Custom test suite | ✅ Working (2/2 pass) |
-| Backend API | HTTP interface to the orchestration pipeline | FastAPI (Python) | 🔲 Not yet built |
+| Backend API | HTTP interface to the orchestration pipeline | FastAPI (Python) | ✅ Working  |
 | UI | User-facing interface for reviewing ROs and insights | Angular | 🔲 Not yet built |
 
 ---

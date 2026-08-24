@@ -1,0 +1,84 @@
+<div class="container">
+  <header>
+    <h1>RO Insights Engine</h1>
+    <p class="subtitle">AI-powered Repair Order review — damage classification &amp; warranty uplift analysis</p>
+  </header>
+
+  <div class="content">
+    <section class="ro-list">
+      <h2>Sample Repair Orders</h2>
+
+      @if (error()) {
+        <div class="error-banner">{{ error() }}</div>
+      }
+
+      <ul>
+        @for (ro of repairOrders(); track ro.ro_id) {
+          <li>
+            <button
+              class="ro-button"
+              [class.active]="selectedRoId() === ro.ro_id"
+              (click)="analyze(ro.ro_id)"
+              [disabled]="loading()"
+            >
+              {{ ro.ro_id }}
+            </button>
+          </li>
+        }
+      </ul>
+    </section>
+
+    <section class="results">
+      <h2>Insights</h2>
+
+      @if (loading()) {
+        <div class="loading">Analyzing {{ selectedRoId() }}... (calling LLM + RAG pipeline)</div>
+      }
+
+      @if (result() && !loading()) {
+        <div class="result-card">
+          <div class="result-header">
+            <span class="ro-id">{{ result()!.ro_id }}</span>
+            <span class="status-badge" [class.needs-approval]="result()!.status === 'NEEDS_APPROVAL'">
+              {{ result()!.status }}
+            </span>
+          </div>
+
+          <div class="section">
+            <h3>Damage Classification</h3>
+            <table>
+              <tr><td>Category</td><td>{{ result()!.damage_classification.category }}</td></tr>
+              <tr><td>Sub-category</td><td>{{ result()!.damage_classification.sub_category }}</td></tr>
+              <tr><td>Severity</td><td>{{ result()!.damage_classification.severity }}</td></tr>
+              <tr><td>Confidence</td><td>{{ result()!.damage_classification.confidence }}</td></tr>
+            </table>
+          </div>
+
+          <div class="section">
+            <h3>Warranty Uplift Opportunities</h3>
+            @if (result()!.opportunities.length === 0) {
+              <p class="no-opportunities">No uplift opportunities identified for this RO.</p>
+            }
+            @for (opp of result()!.opportunities; track opp.type) {
+              <div class="opportunity-card">
+                <div class="opportunity-type">{{ opp.type }}</div>
+                <div class="opportunity-finding">{{ opp.finding }}</div>
+                @if (opp.potential_additional_labor) {
+                  <div class="opportunity-amount">
+                    Potential additional reimbursement: <strong>${{ opp.potential_additional_labor }}</strong>
+                  </div>
+                }
+              </div>
+            }
+          </div>
+
+          <div class="run-id">run_id: {{ result()!.run_id }}</div>
+        </div>
+      }
+
+      @if (!result() && !loading() && !error()) {
+        <p class="placeholder">Select a Repair Order on the left to run the AI analysis.</p>
+      }
+    </section>
+  </div>
+</div>
